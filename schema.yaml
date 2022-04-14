@@ -1,0 +1,79 @@
+title: Foundation OCI
+schemaVersion: 1.1.0
+version: "202008"
+groupings:
+  - title: "Foundation"
+    variables:
+      - ${region}
+      - ${compartment_ocid}
+  - title: "Redes"
+    variables:
+      - ${apodo}
+      - ${vcn}
+      - ${dmz}
+      - ${app}
+      - ${data}
+  - title: "Firewall"
+    variables:
+      - ${puertosdmz}
+      - ${puertosapp}
+      - ${puertosdata}
+  - title: "DNS"
+    variables:
+      - ${zona}
+
+variables:
+  region:
+    type: oci:identity:region:name
+    title: Region
+    required: true
+
+  compartment_ocid:
+    type: oci:identity:compartment:id
+    title: Compartment para Redes
+    required: true
+
+  apodo:
+    type: string
+    required: true 
+    title: Nombre
+
+  vcn:
+    type: string
+    default: "192.168.10.0/24"
+    required: true 
+    title: CIDR de la vcn
+  dmz:
+    type: string
+    default: "192.168.10.0/26"
+    required: true 
+    title: CIDR de la dmz
+  app:
+    type: string
+    default: "192.168.10.64/26"
+    required: true 
+    title: CIDR de la app
+  data:
+    type: string
+    default: "192.168.10.128/26"
+    required: true 
+    title: CIDR de data
+  puertosdmz:
+    type: string
+    default: "80"
+    required: true 
+    title: Lista de puertos abiertos de la dmz a internet
+  puertosapp:
+    type: string
+    default: "1500,8000,8080"
+    required: true 
+    title: Lista de puertos abiertos de la app a dmz
+  puertosdata:
+    type: string
+    default: "1521"
+    required: true 
+    title: Lista de puertos abiertos de data a app
+  zona:
+    type: string
+    required: true 
+    title: Zona (DNS domain)
