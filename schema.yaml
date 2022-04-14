@@ -65,12 +65,12 @@ variables:
     title: Lista de puertos abiertos de la dmz a internet
   puertosapp:
     type: string
-    default: "1500,8000,8080"
+    default: "80,1500,8000,8080"
     required: true 
     title: Lista de puertos abiertos de la app a dmz
   puertosdata:
     type: string
-    default: "1521"
+    default: "1521,1522"
     required: true 
     title: Lista de puertos abiertos de data a app
   zona:

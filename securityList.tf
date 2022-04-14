@@ -81,4 +81,17 @@ resource "oci_core_security_list" "sldata" {
                }
             }
     }
+ dynamic ingress_security_rules {
+    for_each = local.puertosdata
+    iterator = i
+    content {
+             protocol  = "6"         // tcp
+             source    = var.dmz
+             stateless = false
+             tcp_options {
+               min = i.value
+               max = i.value
+               }
+            }
+    }
 }
