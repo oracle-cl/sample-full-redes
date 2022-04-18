@@ -2,7 +2,7 @@ title: Foundation OCI
 schemaVersion: 1.1.0
 version: "202008"
 groupings:
-  - title: "Foundation"
+  - title: "Tenancy"
     variables:
       - ${region}
       - ${compartment_ocid}
@@ -18,7 +18,7 @@ groupings:
       - ${puertosdmz}
       - ${puertosapp}
       - ${puertosdata}
-  - title: "DNS"
+  - title: "DNS Privado"
     variables:
       - ${zona}
 
