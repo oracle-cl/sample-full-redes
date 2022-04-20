@@ -1,4 +1,6 @@
-title: Foundation OCI
+title: Despliegue full vcn
+description: Despliegue típico redes (dmz,app,data)
+informationalText: Ejemplo Terraform Redes
 schemaVersion: 1.1.0
 version: "202008"
 groupings:
