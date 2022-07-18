@@ -3,7 +3,6 @@ variable "compartment_ocid" {}
 
 #########################################
 variable "apodo" {}
-#########################################
 variable "vcn" {}
 variable "app" {}
 variable "dmz" {}

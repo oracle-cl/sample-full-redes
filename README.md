@@ -4,3 +4,5 @@ Crea una topología básica
  * subnet dmz
  * subnet app
  * subnet datos
+* DNS
+ * dominio privado
