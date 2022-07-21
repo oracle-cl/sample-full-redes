@@ -62,7 +62,7 @@ variables:
     title: CIDR de data
   puertosdmz:
     type: string
-    default: "80"
+    default: "80,22"
     required: true 
     title: Lista de puertos abiertos de la dmz a internet
   puertosapp:
