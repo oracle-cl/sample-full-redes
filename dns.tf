@@ -1,5 +1,6 @@
 data "oci_core_vcn_dns_resolver_association" "resolver" {
   vcn_id = oci_core_vcn.vcn.id
+  depends_on = [ oci_core_subnet.app ]
 }
 
 resource "oci_dns_resolver" "resolver" {
